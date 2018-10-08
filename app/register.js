@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import {BoxShadow} from 'react-native-shnpmadow'
-import {AppRegistry, StyleSheet, Text, View, TextInput} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, TextInput,TouchableOpacity} from 'react-native';
 
 export default class Register extends Component {
   render() {
@@ -21,9 +21,9 @@ export default class Register extends Component {
           </View>
 
           <View style={styles.middleInput}>
-            <View style={styles.leftBtn}>
-              <Text style={{fontSize: 14, color: '#ffffff', fontWeight: 'bold'}}>获取验证码</Text>
-            </View>
+              <TouchableOpacity style={styles.leftBtn}>
+                <Text style={{fontSize: 14, color: '#ffffff', fontWeight: 'bold'}}>获取验证码</Text>
+              </TouchableOpacity>
             <View style={styles.rightInput}>
               <TextInput
                 style={{padding: 0, fontSize: 13, paddingLeft: 15}}
@@ -34,8 +34,10 @@ export default class Register extends Component {
           </View>
         </View>
         <View style={styles.bottom}>
-          <View style={styles.bottomBtn}>
-            <Text style={{fontSize: 15, color: '#ffffff', fontWeight: 'bold'}}>我填好了</Text>
+          <View >
+            <TouchableOpacity style={styles.bottomBtn}>
+              <Text style={{fontSize: 15, color: '#ffffff', fontWeight: 'bold'}}>我填好了</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -103,9 +105,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingLeft: 37,
-    paddingRight: 37,
-
     backgroundColor: '#4A89FF',
     borderRadius: 40,
     width: 149,
@@ -131,10 +130,8 @@ const styles = StyleSheet.create({
   bottomBtn: {
     display: 'flex',
     flexDirection: 'row',
-    paddingTop:9.5,
-    paddingBottom:9.5,
-    paddingLeft: 40,
-    paddingRight: 40,
+   justifyContent:'center',
+    alignItems:'center',
     backgroundColor: '#FF6B88',
     borderRadius: 40,
     width: 150,
