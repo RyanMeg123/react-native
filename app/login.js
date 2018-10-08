@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import {BoxShadow} from 'react-native-shnpmadow'
-import {AppRegistry, StyleSheet, Text, View, TextInput,Image,} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, TextInput,Image,TouchableOpacity} from 'react-native';
 
 export default class Login extends Component {
   render() {
@@ -47,23 +47,12 @@ export default class Login extends Component {
           </View>
         </View>
         <View style={styles.bottom}>
-          <View style={styles.bottomBtn}>
-            <Text style={{fontSize: 15, color: '#ffffff', fontWeight: 'bold'}}>忘记密码</Text>
-          </View>
-          <View style={{
-            display: 'flex',
-            flexDirection: 'row',
-            paddingTop: 9.5,
-            paddingBottom: 9.5,
-            paddingLeft: 40,
-            paddingRight: 40,
-            backgroundColor: '#4A89FF',
-            borderRadius: 40,
-            width: 150,
-            height: 40,
-          }}>
-            <Text style={{fontSize: 15, color: '#ffffff', fontWeight: 'bold'}}>确认登录</Text>
-          </View>
+            <TouchableOpacity style={styles.bottomBtn}>
+              <Text  style={{fontSize: 15, color: '#ffffff', fontWeight: 'bold'}}>忘记密码</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.leftBtn}>
+              <Text style={{fontSize: 15, color: '#ffffff', fontWeight: 'bold'}}>确认登录</Text>
+            </TouchableOpacity>
         </View>
       </View>
     );
@@ -131,9 +120,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingLeft: 37,
-    paddingRight: 37,
-
     backgroundColor: '#4A89FF',
     borderRadius: 40,
     width: 149,
@@ -160,10 +146,8 @@ const styles = StyleSheet.create({
   bottomBtn: {
     display: 'flex',
     flexDirection: 'row',
-    paddingTop: 9.5,
-    paddingBottom: 9.5,
-    paddingLeft: 40,
-    paddingRight: 40,
+    justifyContent:'center',
+    alignItems:'center',
     backgroundColor: '#FF6B88',
     borderRadius: 40,
     width: 150,
