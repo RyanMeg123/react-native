@@ -9,5 +9,6 @@ import Forget from './app/forgetPwd';
 import Search from './app/search';
 import Information from './app/personal-information/home';
 import Home from './app/home-page/home-page';
+import Msg from './app/msg/msg'
 import {name as appName} from './app.json';
 AppRegistry.registerComponent(appName, () => App);
