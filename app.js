@@ -5,6 +5,7 @@ import Home from './app/home-page/home-page'
 import Find from './app/find/find'
 import Msg from './app/msg/msg'
 import Information from './app/personal-information/home'
+import Search from './app/search'
 
 class SettingsScreen extends React.Component {
   render() {
@@ -32,7 +33,7 @@ export default createBottomTabNavigator(
       }),
     },
     Find: {
-      screen:Find,
+      screen:Search,
       navigationOptions: ({ navigation }) => ({
         tabBarLabel: '搜索',
         tabBarIcon: ({ focused, tintColor }) => (

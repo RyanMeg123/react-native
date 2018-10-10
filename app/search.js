@@ -1,104 +1,99 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, TextInput, Image,} from 'react-native'
+import {View, Text, StyleSheet, TextInput, Image, ScrollView} from 'react-native'
+import ScrollableTabView, {DefaultTabBar} from 'react-native-scrollable-tab-view'
 
 export default class Search extends Component {
   render() {
-    var searchArr=[];
-    for(var i=0;i<6;i++){
-      searchArr.push(
-        <Text key={i} style={{width:170,paddingTop:10,color:'#333',fontSize:13,}}>这是关键字后活活活</Text>
-
-      );
-    }
     return (
       <View style={styles.container}>
-        <View style={styles.containerTop}>
-          <TextInput
-            style={{
-              width: 303,
-              height: 30,
-              padding: 0,
-              backgroundColor: '#eee',
-              fontSize: 13,
-              borderRadius: 50,
-              paddingLeft: 35,
-            }}
-            placeholder={'搜热帖、搜神贴'}
-            underlineColorAndroid={'transparent'}
-
-          />
-          <Text style={{fontSize: 15, color: '#333', fontWeight: 'bold'}}>搜索</Text>
+        <View style={styles.topContainer}>
+          <TextInput placeholder={'搜话题 / 帖子 / 文章'}
+                     underlineColorAndroid={'transparent'}
+                     style={{
+                       width: 330,
+                       height: 40,
+                       padding: 0,
+                       backgroundColor: '#eee',
+                       fontSize: 14,
+                       borderRadius: 50,
+                       paddingLeft: 40,
+                     }}/>
           <Image source={require('./image/search.png')}
-                 style={{width: 15, height: 15, position: 'absolute', top: 15, left: 10, zIndex: 100}}/>
+                 style={{width: 20, height: 20, position: 'absolute', top: 11, left: 10}}/>
+          <Image source={require('./image/close-2x.png')}
+                 style={{width: 22, height: 22, position: 'absolute', top: 10, left: 300}}/>
+          <Image source={require('./image/close-3x.png')}
+                 style={{width: 28, height: 28, position: 'absolute', top: 7, left: 343}}/>
         </View>
-        <View style={styles.containerBody}>
-          <Text style={{color: '#aaa',fontSize:10,}}>热门搜索</Text>
-          <View style={styles.bodyLeft}>
-            <Text style={{color: '#aaa',fontSize:10,}}>换一批</Text>
-            <Image source={require('./image/batch.png')} style={{width: 10, height: 10, marginLeft: 13}}/>
-          </View>
-        </View>
-        <View style={styles.body}>
-          {searchArr}
-        </View>
-        <View style={styles.containerBody}>
-          <Text style={{color: '#aaa',fontSize:10,}}>历史记录</Text>
-          <View style={styles.bodyLeft}>
-            <Text style={{color: '#aaa',fontSize:10,}}>全部清空</Text>
-            <Image source={require('./image/delete.png')} style={{width: 10, height: 10, marginLeft: 13}}/>
-          </View>
-        </View>
-        <View style={styles.body}>
-          {searchArr}
-        </View>
+
+        <ScrollableTabView
+          locked={true}
+          style={{flex: 1,marginTop:15,}}
+          scrollWithoutAnimation={true}
+          tabBarUnderlineStyle={{backgroundColor: '#C10C0C'}}
+          tabBarBackgroundColor='#F9F9F9'
+          tabBarActiveTextColor='#C10C0C'
+          tabBarInactiveTextColor='#000'
+          tabBarTextStyle={{fontSize: 15}}
+          renderTabBar={() => <DefaultTabBar/>}>
+          <ScrollView tabLabel='话题' style={{flex: 1}}>
+            <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+              <Text style={{fontSize: 20}}>这是话题的搜索结果</Text>
+            </View>
+          </ScrollView>
+          <ScrollView tabLabel='帖子'>
+            <View styles={{
+              display: 'flex',
+              flex: 1,
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+              <Text style={{fontSize: 20}}>这是帖子的搜索结果</Text>
+            </View>
+          </ScrollView>
+          <ScrollView tabLabel='文章'>
+            <View styles={{
+              display: 'flex',
+              flex: 1,
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+              <Text style={{fontSize: 20}}>这是文章的搜索结果</Text>
+            </View>
+          </ScrollView>
+        </ScrollableTabView>
+
 
       </View>
     )
+
+
   }
 }
 
 const styles = StyleSheet.create({
+  bodyContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    marginTop: 25,
+  },
+  topContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    marginTop: 20,
+    position: 'relative',
+  },
   container: {
     display: 'flex',
-    flex: 1,
     flexDirection: 'column',
-    paddingLeft: 16,
-    paddingRight: 16,
+    flex: 1,
+    paddingLeft: 20,
+    paddingRight: 20,
 
   },
-  containerTop: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    position: 'relative',
-    paddingTop: 7,
-    paddingBottom: 7,
-    marginTop:30
-
-  },
-  containerBody: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    fontSize: 10,
-    marginTop:25,
-
-
-  },
-  bodyLeft: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  body:{
-    display:'flex',
-    flexDirection:'row',
-    justifyContent:'flex-start',
-    alignItems:'center',
-    flexWrap: 'wrap',
-    marginTop: 5,
-  }
 })
