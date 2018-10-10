@@ -49,7 +49,7 @@ export default createBottomTabNavigator(
         tabBarLabel: '发现',
         tabBarIcon: ({ focused, tintColor }) => (
           <Image
-            source={focused?require('./app/image/msging.png'):require('./app/image/msged.png')}
+            source={focused?require('./app/image/finding.png'):require('./app/image/finded.png')}
             style={{width:20,height:20,}}/>
         )
       }),
@@ -68,10 +68,10 @@ export default createBottomTabNavigator(
   },
   {  tabBarOptions: {
       style: {
-        backgroundColor: '#C10C0C',
+        backgroundColor: '#fff',
       },
-      activeTintColor:'#000',
-      inactiveTintColor:'#fff'
+      activeTintColor:'#C10C0C',
+      inactiveTintColor:'#000'
     }
   }
 

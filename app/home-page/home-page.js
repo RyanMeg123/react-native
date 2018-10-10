@@ -60,12 +60,19 @@ export default createMaterialTopTabNavigator(
       },
       tabStyle: {
         width: 100,
+        // color:'red'
       },
       style: {
-        backgroundColor: '#000',
+        backgroundColor: '#fff',
       },
-      activeTintColor:'#C10C0C',
-      inactiveTintColor:'#fff'
+      indicatorStyle:{
+        width:20,
+        backgroundColor: 'red',
+        marginLeft:40,
+        height:3,
+      },
+      activeTintColor:'#000',
+      inactiveTintColor:'#000'
     }
   }
 

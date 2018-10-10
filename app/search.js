@@ -4,6 +4,13 @@ import ScrollableTabView, {DefaultTabBar} from 'react-native-scrollable-tab-view
 
 export default class Search extends Component {
   render() {
+    // const tabUnderlineStyle = {
+    //   position: 'absolute',
+    //   width: containerWidth / numberOfTabs,
+    //   height: 4,
+    //   backgroundColor: 'navy',
+    //   bottom: 0,
+    // };
     return (
       <View style={styles.container}>
         <View style={styles.topContainer}>
@@ -30,9 +37,9 @@ export default class Search extends Component {
           locked={true}
           style={{flex: 1,marginTop:15,}}
           scrollWithoutAnimation={true}
-          tabBarUnderlineStyle={{backgroundColor: '#C10C0C'}}
+          tabBarUnderlineStyle={{backgroundColor: '#C10C0C',width:20,marginLeft:50}}
           tabBarBackgroundColor='#F9F9F9'
-          tabBarActiveTextColor='#C10C0C'
+          tabBarActiveTextColor='#000'
           tabBarInactiveTextColor='#000'
           tabBarTextStyle={{fontSize: 15}}
           renderTabBar={() => <DefaultTabBar/>}>
