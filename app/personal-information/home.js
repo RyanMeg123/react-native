@@ -10,8 +10,17 @@ export default class Information extends Component{
                style={{width:'100%',height:300}}/>
        <View style={styles.top}>
          <View style={styles.header}>
-           <Image source={require('../image/touxiang.jpeg')}
-                  style={{width:80,height:80,borderRadius:50,borderWidth:3,borderColor:'#fff'}}/>
+             <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+               <Image source={require('../image/touxiang.jpeg')}
+                      style={{width:80,height:80,borderRadius:50,borderWidth:3,borderColor:'#fff'}}/>
+               <View style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+                 <Image source={require('../image/gold-coin.png')}
+                        style={{width:60,height:30}}/>
+                 <Text style={{fontSize:10,color:'red',fontWeight:'bold',paddingTop:10}}>签到</Text>
+
+               </View>
+             </View>
+
            <View style={styles.headerName}>
              <Text style={{fontSize:15,color:'#fff',fontWeight: 'bold',}}>Ryan梅子</Text>
              <Image source={require('../image/boy.png')}
@@ -34,111 +43,68 @@ export default class Information extends Component{
                <Text style={{fontSize:15,color:'#AFB3BF'}}>粉丝</Text>
              </View>
              <View style={styles.navList}>
-               <Image source={require('../image/brush.jpg')}
-                 style={{width:20,height:30,}}/>
+               <Image source={require('../image/brush.png')}
+                 style={{width:20,height:20,}}/>
                <Text style={{fontSize:15,color:'#AFB3BF'}}>个人资料</Text>
              </View>
            </View>
            <View style={styles.body}>
              <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-                   <Image source={require('../image/plane.jpg')}
-                          style={{width:30,height:30,}}
+                   <Image source={require('../image/icon-invitation.png')}
+                          style={{width:20,height:20,}}
                    />
                <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
+                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>我的帖子</Text>
+                 <Image source={require('../image/icon-arow.png')}
                         style={{width:20,height:20,}}/>
                </View>
 
              </View>
              <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
+               <Image source={require('../image/icon-msg.png')}
+                      style={{width:20,height:20,}}
                />
                <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
+                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>我的消息</Text>
+                 <Image source={require('../image/icon-arow.png')}
                         style={{width:20,height:20,}}/>
                </View>
 
              </View>
              <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
+               <Image source={require('../image/icon-friend.png')}
+                      style={{width:20,height:20,}}
                />
                <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
+                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>我的关注</Text>
+                 <Image source={require('../image/icon-arow.png')}
                         style={{width:20,height:20,}}/>
                </View>
 
              </View>
              <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
+               <Image source={require('../image/icon-@.png')}
+                      style={{width:20,height:20,}}
                />
                <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
+                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>我的文章</Text>
+                 <Image source={require('../image/icon-arow.png')}
                         style={{width:20,height:20,}}/>
                </View>
 
              </View>
              <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
+               <Image source={require('../image/icon-person.png')}
+                      style={{width:20,height:20,}}
                />
                <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
+                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>信息修改</Text>
+                 <Image source={require('../image/icon-arow.png')}
                         style={{width:20,height:20,}}/>
                </View>
 
              </View>
-             <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
-               />
-               <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
-                        style={{width:20,height:20,}}/>
-               </View>
 
-             </View>
-             <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
-               />
-               <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
-                        style={{width:20,height:20,}}/>
-               </View>
-
-             </View>
-             <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
-               />
-               <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
-                        style={{width:20,height:20,}}/>
-               </View>
-
-             </View>
-             <View style={{display:'flex',flexDirection:'row',justifyContent:'space-between',alignItems:'center', borderBottomWidth: 1, borderColor:'#AFB3BF', paddingLeft:20, paddingRight:20, paddingTop:10, paddingBottom:10,}}>
-               <Image source={require('../image/plane.jpg')}
-                      style={{width:30,height:30,}}
-               />
-               <View style={{display:'flex',flexDirection:'row',flex:1,justifyContent:'space-between',alignItems:'center'}}>
-                 <Text style={{fontSize:15,fontWeight:'bold',color:'#2A2B2F',paddingLeft:20,}}>纸飞机</Text>
-                 <Image source={require('../image/icon.jpg')}
-                        style={{width:20,height:20,}}/>
-               </View>
-
-             </View>
            </View>
          </View>
        </View>
