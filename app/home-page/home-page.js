@@ -7,8 +7,27 @@ import Recommend from './homelist/recommend'
 import Video from './homelist/video'
 import Picture from './homelist/picture'
 
+class SettingsScreen extends React.Component {
+  render() {
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>这是 烦烦烦</Text>
+      </View>
+    )
+  }
+}
 export default createMaterialTopTabNavigator(
   {
+    // s:{
+    //   screen:SettingsScreen,
+    //   navigationOptions: ({ navigation }) => ({
+    //     tabBarLabel:'',
+    //     tabBarIcon: ({ focused, tintColor }) => (
+    //       <Image source={require('../image/searching.png')}
+    //              style={{width:20,height:20,}}/>
+    //     )
+    //   }),
+    // },
     Attentions: {
       screen: Attentions,
       navigationOptions: ({ navigation }) => ({
@@ -24,13 +43,13 @@ export default createMaterialTopTabNavigator(
     Video: {
       screen:Video,
       navigationOptions: ({ navigation }) => ({
-        tabBarLabel: '视频',
+        tabBarLabel: '排行榜',
       }),
     },
     Information: {
       screen:Picture,
       navigationOptions: ({ navigation }) => ({
-        tabBarLabel: '图片',
+        tabBarLabel: '文章',
       }),
     },
   },
@@ -43,13 +62,12 @@ export default createMaterialTopTabNavigator(
         width: 100,
       },
       style: {
-        backgroundColor: '#fff',
+        backgroundColor: '#000',
       },
-      activeTintColor:'#44BBBE',
-      inactiveTintColor:'#be3f3b'
+      activeTintColor:'#C10C0C',
+      inactiveTintColor:'#fff'
     }
   }
 
 );
-
 

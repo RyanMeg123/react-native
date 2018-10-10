@@ -10,7 +10,8 @@ class SettingsScreen extends React.Component {
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>Settings!</Text>
+        <Image source={require('./app/image/searched.png')}
+               style={{width:20,height:20,}}/>
       </View>
     )
   }
@@ -33,7 +34,7 @@ export default createBottomTabNavigator(
     Find: {
       screen:Find,
       navigationOptions: ({ navigation }) => ({
-        tabBarLabel: '发现',
+        tabBarLabel: '搜索',
         tabBarIcon: ({ focused, tintColor }) => (
           <Image
             source={focused?require('./app/image/searching.png'):require('./app/image/searched.png')}
@@ -44,7 +45,7 @@ export default createBottomTabNavigator(
     Msg: {
       screen:Msg,
       navigationOptions: ({ navigation }) => ({
-        tabBarLabel: '消息',
+        tabBarLabel: '发现',
         tabBarIcon: ({ focused, tintColor }) => (
           <Image
             source={focused?require('./app/image/msging.png'):require('./app/image/msged.png')}
@@ -64,5 +65,13 @@ export default createBottomTabNavigator(
       }),
     },
   },
+  {  tabBarOptions: {
+      style: {
+        backgroundColor: '#C10C0C',
+      },
+      activeTintColor:'#000',
+      inactiveTintColor:'#fff'
+    }
+  }
 
 );
