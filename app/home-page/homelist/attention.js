@@ -6,7 +6,7 @@ export default class Attentions extends Component {
     return (
         <View style={styles.container}>
           <ScrollView>
-            <View style={{display:'flex',flexDirection:'column',flex:1,marginTop:10,backgroundColor:'#fff'}}>
+            <View style={{display:'flex',flexDirection:'column',marginTop:10,backgroundColor:'#fff'}}>
                 <View style={styles.headContainer}>
                   <Image source={require('../../image/banner-2x.jpg')}
                          style={{width:50,height:50,borderRadius:50}}/>
