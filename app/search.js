@@ -29,8 +29,7 @@ export default class Search extends Component {
                  style={{width: 20, height: 20, position: 'absolute', top: 11, left: 10}}/>
           <Image source={require('./image/close-2x.png')}
                  style={{width: 22, height: 22, position: 'absolute', top: 10, left: 300}}/>
-          <Image source={require('./image/close-3x.png')}
-                 style={{width: 28, height: 28, position: 'absolute', top: 7, left: 343}}/>
+          <Text style={{fontSize:15,color:'#000',fontWeight: 'bold',paddingTop:10}}>搜索</Text>
         </View>
 
         <ScrollableTabView
@@ -90,8 +89,8 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginTop: 20,
     position: 'relative',
   },

@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, Image, ScrollView} from 'react-native'
+import {View, Text, StyleSheet, Image, ScrollView,TouchableOpacity} from 'react-native'
 
 export default class Attentions extends Component {
   render() {
     return (
         <View style={styles.container}>
           <ScrollView>
-            <View style={{display:'flex',flexDirection:'column',marginTop:10,backgroundColor:'#fff'}}>
+            <View style={{display:'flex',flexDirection:'column',flex:1,marginTop:10,backgroundColor:'#fff'}}>
+              <View style={{display:'flex',flexDirection:'row',   paddingLeft:10, paddingRight:10,justifyContent:'space-between',alignItems:'center'}}>
                 <View style={styles.headContainer}>
                   <Image source={require('../../image/banner-2x.jpg')}
                          style={{width:50,height:50,borderRadius:50}}/>
@@ -15,6 +16,14 @@ export default class Attentions extends Component {
                     <Text style={{fontSize:12,}}>09/28</Text>
                   </View>
                 </View>
+
+                <TouchableOpacity style={styles.attentionBtn}>
+                    <Text style={{fontSize:10,fontWeight:'bold',color:'#fff'}}>关注</Text>
+                  </TouchableOpacity>
+
+
+              </View>
+
                 <View style={styles.body}>
                   <Text style={{fontSize:15,color:'#000'}}>#非人哉# #万圣街# #有兽焉# 非人哉首届神仙cp站开始啦！
                     为了世界与和平，贯彻爱的力量，小伙伴们快来为自家cp站一下~
@@ -79,14 +88,21 @@ export default class Attentions extends Component {
                 </View>
             </View>
             <View style={{display:'flex',flexDirection:'column',flex:1,marginTop:10,backgroundColor:'#fff'}}>
-              <View style={styles.headContainer}>
-                <Image source={require('../../image/banner-2x.jpg')}
-                       style={{width:50,height:50,borderRadius:50}}/>
-                <View style={styles.headText}>
-                  <Text style={{fontSize:14,}}>非人哉漫画</Text>
-                  <Text style={{fontSize:12,}}>09/28</Text>
+              <View style={{display:'flex',flexDirection:'row',   paddingLeft:10, paddingRight:10,justifyContent:'space-between',alignItems:'center'}}>
+                <View style={styles.headContainer}>
+                  <Image source={require('../../image/banner-2x.jpg')}
+                         style={{width:50,height:50,borderRadius:50}}/>
+                  <View style={styles.headText}>
+                    <Text style={{fontSize:14,}}>非人哉漫画</Text>
+                    <Text style={{fontSize:12,}}>09/28</Text>
+                  </View>
                 </View>
+
+                <TouchableOpacity style={styles.attentionBtn}>
+                  <Text style={{fontSize:10,fontWeight:'bold',color:'#fff'}}>关注</Text>
+                </TouchableOpacity>
               </View>
+
               <View style={styles.body}>
                 <Text style={{fontSize:15,color:'#000'}}>#非人哉# #万圣街# #有兽焉# 非人哉首届神仙cp站开始啦！</Text>
               </View>
@@ -142,6 +158,16 @@ export default class Attentions extends Component {
 }
 
 const styles = StyleSheet.create({
+  attentionBtn:{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent:'center',
+    alignItems:'center',
+    width:50,
+    height:30,
+    backgroundColor:'#C10C0C',
+    borderRadius:3
+  },
   bottomNav:{
     display:'flex',
     flexDirection:'row',
@@ -197,15 +223,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems:'center',
-    paddingLeft:10,
-    paddingRight:10,
+    flex:1,
   },
   container: {
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    paddingTop:15,
-    paddingBottom:15,
     backgroundColor: '#eee'
 
   },
