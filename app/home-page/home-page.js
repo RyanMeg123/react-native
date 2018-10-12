@@ -3,9 +3,9 @@ import React from 'react'
 import {Text, View,Image} from 'react-native'
 import {createBottomTabNavigator,createMaterialTopTabNavigator,TabNavigator} from 'react-navigation'
 import Attentions from './homelist/attention'
+import Article from './homelist/article'
+import Example from './homelist/example'
 import Recommend from './homelist/recommend'
-import Video from './homelist/video'
-import Picture from './homelist/picture'
 
 class SettingsScreen extends React.Component {
   render() {
@@ -40,14 +40,14 @@ export default createMaterialTopTabNavigator(
         tabBarLabel: '推荐',
       }),
     },
-    Video: {
-      screen:Video,
+    example: {
+      screen:Example,
       navigationOptions: ({ navigation }) => ({
         tabBarLabel: '排行榜',
       }),
     },
-    Information: {
-      screen:Picture,
+    article: {
+      screen:Article,
       navigationOptions: ({ navigation }) => ({
         tabBarLabel: '文章',
       }),
